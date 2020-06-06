@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/check_transaction.dir/banking/tests/test_transaction.cpp.o  -o check_transaction liblibbanking.a third-party/gtest/googlemock/gtest/libgtest_main.a third-party/gtest/googlemock/libgmock_main.a third-party/gtest/googlemock/libgmock.a third-party/gtest/googlemock/gtest/libgtest.a -pthread 

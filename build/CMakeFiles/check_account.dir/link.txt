@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/check_account.dir/banking/tests/test_account.cpp.o  -o check_account liblibbanking.a third-party/gtest/googlemock/gtest/libgtest_main.a third-party/gtest/googlemock/libgmock_main.a third-party/gtest/googlemock/libgmock.a third-party/gtest/googlemock/gtest/libgtest.a -pthread 
