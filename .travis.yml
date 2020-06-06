@@ -1,0 +1,18 @@
+os:
+    -linux
+
+addons:
+    apt:
+        - cmake
+        - cmake-data
+
+language: cpp
+
+compiler:
+    - clang
+    - gcc
+
+script:
+    - cmake -H. -Bbuild -DBUILD_TESTS=ON
+    - cmake --build build/
+    - cmake --build build --target test -- ARGS=--verbose

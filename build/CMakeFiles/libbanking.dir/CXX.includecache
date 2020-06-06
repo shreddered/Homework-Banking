@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dima/github/reports/banking/banking/Account.h
+
+/home/dima/github/reports/banking/banking/Transaction.cpp
+Transaction.h
+/home/dima/github/reports/banking/banking/Transaction.h
+cassert
+-
+iostream
+-
+stdexcept
+-
+Account.h
+/home/dima/github/reports/banking/banking/Account.h
+
+/home/dima/github/reports/banking/banking/Transaction.h
+
