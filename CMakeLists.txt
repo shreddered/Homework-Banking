@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDART_REQUIRED ON)
 
 option(BUILD_TESTS "Build tests" OFF)
 
+option(COVERAGE ON)
+
 include(${CMAKE_CURRENT_SOURCE_DIR}/banking/CMakeLists.txt)
 
 if (BUILD_TESTS)
@@ -22,5 +24,14 @@ if (BUILD_TESTS)
         add_executable(check_transaction ${CMAKE_CURRENT_SOURCE_DIR}/banking/tests/test_transaction.cpp)
         target_link_libraries(check_transaction libbanking gtest_main gmock_main)
         add_test(NAME transaction COMMAND check_transaction)
+
+        if (COVERAGE)
+            target_compile_options(check_account PRIVATE --coverage)
+            target_compile_options(check_transaction PRIVATE --coverage)
+
+            target_link_libraries(check_account --coverage)
+            target_link_libraries(check_transaction --coverage)
+        endif(COVERAGE)
     endif(TARGET libbanking)
 endif(BUILD_TESTS)
+

@@ -12,7 +12,13 @@ compiler:
     - clang
     - gcc
 
+before_install:
+    - pip install cpp-coveralls
+
 script:
     - cmake -H. -Bbuild -DBUILD_TESTS=ON
     - cmake --build build/
     - cmake --build build --target test -- ARGS=--verbose
+
+after_success:
+    - coveralls --root . -E "third-party" -E ".*build.*"
