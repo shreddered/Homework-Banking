@@ -21,4 +21,4 @@ script:
     - cmake --build build --target test -- ARGS=--verbose
 
 after_success:
-    - coveralls --root . -E ".*gtest.*" -E ".*CMakeFiles.*" -E ".*test*.'
+    - coveralls --root . -E ".*gtest.*" -E ".*CMakeFiles.*" -E ".*test*."
